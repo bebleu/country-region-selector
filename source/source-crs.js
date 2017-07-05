@@ -63,6 +63,7 @@
 
     if (_showEmptyCountryOption) {
       countryElement.options[0] = new Option(defaultOptionStr, '');
+	  countryElement.options[0].disabled = true;
     }
     _initDataSet({
       whitelist: countryElement.getAttribute("data-whitelist"),
@@ -125,6 +126,7 @@
 		el.length = 0;
     if (_showEmptyRegionOption) {
       el.options[0] = new Option(defaultOptionStr, "");
+	  el.options[0].disabled = true;
       el.selectedIndex = 0;
     }
 	};
@@ -194,6 +196,7 @@
 			regionElement.length = 0;
       if (_showEmptyRegionOption) {
         regionElement.options[0] = new Option(defaultOptionStr, "");
+		regionElement.options[0].disabled = true;
       }
 			var regionData = _countries[selectedCountryIndex][3];
 			for (var i=0; i<regionData.regions.length; i++) {
