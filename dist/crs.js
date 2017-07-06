@@ -63,7 +63,7 @@ var _data = [["Afghanistan","AF","Badakhshan~BDS|Badghis~BDG|Baghlan~BGL|Balkh~B
 		var foundIndex = 0;
 
     if (_showEmptyCountryOption) {
-      countryElement.options[0] = new Option(defaultOptionStr, '');
+      countryElement.options[0] = new Option(defaultOptionStr, 'null', true);
 	  countryElement.options[0].disabled = true;
     }
     _initDataSet({
@@ -126,7 +126,7 @@ var _data = [["Afghanistan","AF","Badakhshan~BDS|Badghis~BDG|Baghlan~BGL|Balkh~B
 
 		el.length = 0;
     if (_showEmptyRegionOption) {
-      el.options[0] = new Option(defaultOptionStr, "");
+      el.options[0] = new Option(defaultOptionStr, 'null', true);
 	  el.options[0].disabled = true;
       el.selectedIndex = 0;
     }
@@ -196,7 +196,7 @@ var _data = [["Afghanistan","AF","Badakhshan~BDS|Badghis~BDG|Baghlan~BGL|Balkh~B
 		} else {
 			regionElement.length = 0;
       if (_showEmptyRegionOption) {
-        regionElement.options[0] = new Option(defaultOptionStr, "");
+        regionElement.options[0] = new Option(defaultOptionStr, 'null', true);
 		regionElement.options[0].disabled = true;
       }
 			var regionData = _countries[selectedCountryIndex][3];
